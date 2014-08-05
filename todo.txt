@@ -14,9 +14,14 @@ User Stories:
 - marketing copy
 
 Engineering Tasks:
-* continuous integration
-- server-side testing
+. automated build
+. setup static code analysis (Lint)
+. setup continuous integration
+* server-side testing
 - client-side testing
 
-To Do on current task:
-- make build fail when Lint fails
+ToDo on current task:
+- Choose testing framework.
+- Abstract framework.
+- Swap out frameworks to ensure that abstraction works.
+- Add LICENSE.txt
