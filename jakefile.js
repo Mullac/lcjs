@@ -1,4 +1,5 @@
 /*global desc, task, jake, fail, complete */
+
 (function() {
 	"use strict";
 
@@ -12,9 +13,12 @@
 		var files = new jake.FileList();
 		files.include("**/*.js");
 		files.exclude("node_modules");
+
 		var options = nodeLintOptions();
 		var passed = lint.validateFileList(files.toArray(), options, {});
-		if (!passed) fail("Lint failed");
+		if (!passed) {
+            fail("Lint failed");
+        }
 	});
 
 	desc("Integrate");

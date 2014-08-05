@@ -11,11 +11,12 @@ being developed in the series.
 
 WeeWikiPaint
 
-To build on Windows:
-- Install node.js
+To build on CI machine:
+- Install VM
 - Install Git
-- Clone repository
+- Install Node.js
+- Clone the repository
 
 To build:
 - Assumes presence of Node.js
-- Run ./jake.sh to build
+- Run ./jake.bat to build
