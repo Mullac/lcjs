@@ -21,7 +21,7 @@ Engineering Tasks:
 - client-side testing
 
 ToDo on current task:
-- Choose testing framework.
+- Choose testing framework [nodeunit].
 - Abstract framework.
 - Swap out frameworks to ensure that abstraction works.
 - Add LICENSE.txt
