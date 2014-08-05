@@ -31,7 +31,7 @@
             }
             complete();
         });
-    });
+    }, {async: true});
 
 	desc("Integrate");
 	task("integrate", ["default"], function() {
