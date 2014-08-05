@@ -14,12 +14,7 @@ User Stories:
 - marketing copy
 
 Engineering Tasks:
-. automated build
-. setup static code analysis (Lint)
-. setup continuous integration
-. Choose testing framework [nodeunit].
-* server-side testing
-- client-side testing
+* create a simple http server
 
 ToDo on current task:
 
