@@ -22,7 +22,6 @@ Engineering Tasks:
 - client-side testing
 
 ToDo on current task:
-- Add LICENSE.txt
 
 Future ideas:
 - Abstract framework.
