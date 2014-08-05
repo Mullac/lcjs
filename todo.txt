@@ -27,3 +27,6 @@ ToDo on current task:
 Future ideas:
 - Abstract framework.
 - Swap out frameworks to ensure that abstraction works.
+
+Notes:
+- Nodeunit does not work correctly on windows (? rather than tick).
