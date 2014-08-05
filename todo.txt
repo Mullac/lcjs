@@ -17,11 +17,16 @@ Engineering Tasks:
 . automated build
 . setup static code analysis (Lint)
 . setup continuous integration
+. Choose testing framework [nodeunit].
 * server-side testing
 - client-side testing
 
 ToDo on current task:
-- Choose testing framework [nodeunit].
+- Add LICENSE.txt
+
+Future ideas:
 - Abstract framework.
 - Swap out frameworks to ensure that abstraction works.
-- Add LICENSE.txt
+
+Notes:
+- Nodeunit does not work correctly on windows (? rather than tick).
