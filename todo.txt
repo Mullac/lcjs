@@ -8,16 +8,17 @@ Minimum Marketing Features:
 - more collaborative features?
 
 User Stories:
-D "hello world" server
+* "hello world" server
 - "hello world" client (one browser)
 - support multiple browsers
 - marketing copy
 
 Engineering Tasks:
-D create a simple http server
+* create a simple http server
 
 ToDo on current task:
 - Modify build script to enforce Node version
+- Integrate
 
 Future ideas:
 - Create 'fail fast' assertion code
