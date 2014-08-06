@@ -8,20 +8,20 @@ Minimum Marketing Features:
 - more collaborative features?
 
 User Stories:
-* "hello world" server
+D "hello world" server
 - "hello world" client (one browser)
 - support multiple browsers
 - marketing copy
 
 Engineering Tasks:
-* create a simple http server
+D create a simple http server
 
 ToDo on current task:
 - Modify build script to enforce Node version
 
 Future ideas:
-- Abstract framework.
-- Swap out frameworks to ensure that abstraction works.
+- Create 'fail fast' assertion code
+- Abstract framework (Swap out frameworks to ensure that abstraction works)
 
 Notes:
 - Nodeunit does not work correctly on windows (? rather than tick).
