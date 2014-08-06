@@ -13,10 +13,7 @@ WeeWikiPaint
 
 To build on CI machine:
 - Install VM
-- Install Git
-- Install Node.js
+- Install Node.js [v0.8.4]
+- Install Git [v1.7.7.5]
 - Clone the repository
-
-To build:
-- Assumes presence of Node.js
 - Run ./jake.bat to build
