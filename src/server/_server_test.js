@@ -12,7 +12,6 @@ exports.tearDown = function(done) {
 
 exports.testServerResponseToGetRequests = function(test) {
     server.start();
-
     http.get("http://localhost:8080", function(response) {
 	    response.on("data", function(){});
 	    test.done();

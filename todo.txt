@@ -17,6 +17,7 @@ Engineering Tasks:
 * create a simple http server
 
 ToDo on current task:
+- Modify build script to enforce Node version
 
 Future ideas:
 - Abstract framework.
