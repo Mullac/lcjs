@@ -8,13 +8,12 @@ Minimum Marketing Features:
 - more collaborative features?
 
 User Stories:
-* Serve a one-file homepage
-- Serve 404 errors for everything else
+* Custom 404 page
 - Marketing copy
 - Publish to Internet
 
 Engineering Tasks:
-* Serve a file
+-
 
 ToDo on current task:
 -
@@ -22,6 +21,8 @@ ToDo on current task:
 Future ideas:
 - Create 'fail fast' assertion code
 - Abstract test framework? (Swap out frameworks to ensure that abstraction works)
+- Static checking of function parameters (rather than writing tests)
+- Handle errors properly in server.js
 
 Notes:
 - Nodeunit default reporter has minor display issues on Windows
