@@ -13,12 +13,10 @@ exports.test_serverReturnsHelloWorld = function(test) {
 		response.setEncoding("utf8");
 
 		test.equals(200, response.statusCode, "status code");
-
 		response.on("data", function(chunk){
 			receivedData = true;
 			test.equals("Hello World", chunk, "response text");
 		});
-
 		response.on("end", function() {
 			test.ok( receivedData, "Should have received response data");
 			server.stop( function () {
@@ -26,6 +24,11 @@ exports.test_serverReturnsHelloWorld = function(test) {
 			} );
 		});
 	});
+};
+
+exports.test_serverServesAFile = function(test) {
+	test.done();
+	// TODO
 };
 
 exports.test_serverRequiresPortNumber = function(test) {

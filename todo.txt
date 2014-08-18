@@ -8,21 +8,20 @@ Minimum Marketing Features:
 - more collaborative features?
 
 User Stories:
-* "hello world" server
-- "hello world" client (one browser)
-- support multiple browsers
-- marketing copy
+* Serve a one-file homepage
+- Serve 404 errors for everything else
+- Marketing copy
+- Publish to Internet
 
 Engineering Tasks:
-* create a simple http server
+* Serve a file
 
 ToDo on current task:
-- Modify build script to enforce Node version
-- Integrate
+-
 
 Future ideas:
 - Create 'fail fast' assertion code
-- Abstract framework (Swap out frameworks to ensure that abstraction works)
+- Abstract test framework? (Swap out frameworks to ensure that abstraction works)
 
 Notes:
-- Nodeunit does not work correctly on windows (? rather than tick).
+- Nodeunit default reporter has minor display issues on Windows
