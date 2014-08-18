@@ -8,7 +8,6 @@ Minimum Marketing Features:
 - more collaborative features?
 
 User Stories:
-* Custom 404 page
 - Marketing copy
 - Publish to Internet
 

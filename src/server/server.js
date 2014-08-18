@@ -1,33 +1,41 @@
+(function () {
+	"use strict";
 
-"use strict";
+	var http = require( "http" );
+	var fs = require( "fs" );
+	var server;
 
-var http = require( "http" );
-var fs = require("fs");
-var server;
+	exports.start = function ( homePageToServer, notFoundPageToServe, portNumber ) {
+		if ( !portNumber ) {
+			throw "port number is required";
+		}
 
-exports.start = function( htmlFileToServer, portNumber ) {
-	if( !portNumber ) {
-		throw "port number is required";
+		server = http.createServer();
+		server.on( "request", function ( request, response ) {
+			if ( request.url === "/" || request.url === "/index.html" ) {
+				response.statusCode = 200;
+				serverFile( response, homePageToServer );
+			}
+			else {
+				response.statusCode = 404;
+				serverFile( response, notFoundPageToServe );
+			}
+		} );
+
+		server.listen( portNumber );
+	};
+
+	exports.stop = function ( callback ) {
+		server.close( callback );
+	};
+
+	function serverFile( response, file ) {
+		fs.readFile( file, function ( err, data ) {
+			if ( err ) {
+				throw err;
+			}
+			response.end( data );
+		} );
 	}
 
-    server = http.createServer();
-	server.on("request", function( request, response ) {
-		if( request.url === "/" || request.url === "/index.html" ) {
-			fs.readFile( htmlFileToServer, function ( err, data ) {
-				if ( err ) {
-					throw err; //TODO: fix me
-				}
-				response.end( data );
-			} );
-		}
-		else {
-			response.statusCode = 404;
-			response.end();
-		}
-	});
-    server.listen( portNumber );
-};
-
-exports.stop = function(callback) {
-	server.close(callback);
-};
+}());
