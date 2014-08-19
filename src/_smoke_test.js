@@ -25,12 +25,18 @@
 	exports.test_canGetHomePage = function ( test ) {
 		httpGet( "http://localhost:8080", function ( response, receivedData ) {
 			var foundHomePage = receivedData.indexOf("WeeWikiPaint home page") !== -1;
-			test.ok( foundHomePage, "home page should have contained WeeWikiPaint marker");
+			test.ok( foundHomePage, "home page should have contained test marker");
 			test.done();
 		});
 	};
 
-	// TODO: check 404 page
+	exports.test_canGet404Page = function ( test ) {
+		httpGet( "http://localhost:8080/nonexistant.html", function ( response, receivedData ) {
+			var found404Page = receivedData.indexOf( "WeeWikiPaint 404 page" ) !== -1;
+			test.ok( found404Page, "404 page should have contained test marker" );
+			test.done();
+		} );
+	};
 
 	function runServer( callback ) {
 		child = child_process.spawn( "node", ["src/server/weewikipaint", "8080"] );
@@ -42,7 +48,6 @@
 		});
 	}
 
-	// TODO: eliminate duplicate with _server_test.js
 	function httpGet( url, callback ) {
 		var request = http.get( url );
 		request.on( "response", function ( response ) {
