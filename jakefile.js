@@ -21,12 +21,12 @@
 	task("lint", ["nodeVersion"], function() {
 		var lint = require("./build/lint/lint_runner.js");
 
-		var files = new jake.FileList();
-		files.include("**/*.js");
-		files.exclude("node_modules");
+		var javascriptFiles = new jake.FileList();
+		javascriptFiles.include("**/*.js");
+		javascriptFiles.exclude("node_modules");
 
 		var options = nodeLintOptions();
-		var passed = lint.validateFileList(files.toArray(), options, {});
+		var passed = lint.validateFileList( javascriptFiles.toArray(), options, {});
 		if (!passed) {
             fail("Lint failed");
         }
@@ -37,6 +37,7 @@
 	    var testFiles = new jake.FileList();
 	    testFiles.include("**/_*_test.js");
 	    testFiles.exclude("node_modules");
+	    testFiles.exclude( "_release_test.js" );
 
         var reporter = require("nodeunit").reporters["default"];
         reporter.run(testFiles.toArray(), null, function(failures) {
@@ -47,20 +48,14 @@
         });
     }, {async: true});
 
-	desc("Integrate");
-	task("integrate", ["default"], function() {
-		console.log("1. Make sure 'git status' is clean.");
-		console.log("2. Build on the integration box.");
-		console.log("   a. Walk over to integration box.");
-		console.log("   b. 'git pull'");
-		console.log("   c. 'jake'");
-		console.log("   d. If jake fails, stop! Try again after fixing the issue.");
-		console.log("3. 'git checkout integration'");
-		console.log("4. 'git merge master --no-ff --log'");
-		console.log("5. 'git checkout master'");
-	});
+	desc( "Deploy to Heroku" );
+	task( "deploy", ["default"], function () {
+		console.log( "1. Make sure 'git status' is clean." );
+		console.log( "2. 'git push heroku master'" );
+		console.log( "3. 'jake test'" );
+	} );
 
-//	desc( "Ensure correct version of Node is present. Use 'strict=true' to require exact match" );
+	//	desc( "Ensure correct version of Node is present. Use 'strict=true' to require exact match" );
 	task( "nodeVersion", [], function () {
 		function failWithQualifier( qualifier ) {
 			fail( "Incorrect node version. Expected " + qualifier +
@@ -88,6 +83,19 @@
 				failWithQualifier( "at least" );
 			}
 		}
+	} );
+
+	desc("Integrate");
+	task("integrate", ["default"], function() {
+		console.log("1. Make sure 'git status' is clean.");
+		console.log("2. Build on the integration box.");
+		console.log("   a. Walk over to integration box.");
+		console.log("   b. 'git pull'");
+		console.log("   c. 'jake'");
+		console.log("   d. If jake fails, stop! Try again after fixing the issue.");
+		console.log("3. 'git checkout integration'");
+		console.log("4. 'git merge master --no-ff --log'");
+		console.log("5. 'git checkout master'");
 	});
 
 	function parseNodeVersion( description, versionString ) {
