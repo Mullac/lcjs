@@ -12,11 +12,8 @@ User Stories:
 	* Publish to the Internet
 
 Engineering Tasks:
-	- Write end-to-end integration test
-	- Write server launch code.
 
 ToDo on current task:
-	- Put homepage.html in a directory
 
 Future ideas:
 	- Create 'fail fast' assertion code
