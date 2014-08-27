@@ -21,6 +21,9 @@ Future ideas:
 	- Abstract test framework? (Swap out frameworks to ensure that abstraction works)
 	- Static checking of function parameters (rather than writing tests)
 	- Handle errors properly in server.js
+	- server.stop() waits for open connections to close (e.g. Firefox keeps an open connection).
+	  make if forcibly close?
+	- Remove Node version duplication between package.json and jakefile.js
 
 Notes:
 	- Nodeunit default reporter has minor display issues on Windows

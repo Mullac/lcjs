@@ -1,0 +1,18 @@
+
+Jake commands
+
+	jake
+	jake clean
+	jake deploy
+
+GIT commands
+
+	git status
+	git add .
+	git commit -am "[Commit message]"
+	git push
+
+Heroku commands
+
+	heroku create [name of app]
+	git push heroku master
