@@ -12,6 +12,7 @@ User Stories:
 	* Publish to the Internet
 
 Engineering Tasks:
+	- Fix DNS
 
 ToDo on current task:
 
