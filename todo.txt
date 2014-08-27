@@ -9,10 +9,10 @@ Minimum Marketing Features:
 
 User Stories:
 	- Marketing copy
-	* Publish to the Internet
+	- Publish to the Internet
 
 Engineering Tasks:
-	- Fix DNS
+	* Fix DNS
 
 ToDo on current task:
 

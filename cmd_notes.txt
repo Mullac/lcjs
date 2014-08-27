@@ -2,6 +2,7 @@
 Jake commands
 
 	jake
+	jake test
 	jake clean
 	jake deploy
 
@@ -16,3 +17,5 @@ Heroku commands
 
 	heroku create [name of app]
 	git push heroku master
+	heroku ps:scale web=0   // Stops the app
+	heroku ps:scale web=1   // Starts the app

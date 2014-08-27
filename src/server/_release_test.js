@@ -4,11 +4,11 @@
 (function () {
 	"use strict";
 
-	var procfile = require( "procfile" );
 	var jake = require( "jake" );
 	var child_process = require( "child_process" );
 	var http = require( "http" );
 	var fs = require( "fs" );
+	var procfile = require( "procfile" );
 	var child;
 
 	exports.test_isOnWeb = function ( test ) {
