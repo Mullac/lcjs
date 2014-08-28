@@ -3,6 +3,10 @@
 	"version": "0.0.1",
 	"engines": {
 		"node": "0.10.29",
-		"npm":  "1.4.14"
+		"npm": "1.4.14"
+	},
+	"repository": {
+		"type": "git",
+		"url":  "git://github.com/Mullac/lcjs.git"
 	}
 }

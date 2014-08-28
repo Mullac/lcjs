@@ -1,20 +1,30 @@
 WeeWikiPaint
 
 Minimum Marketing Features:
-	* marketing home page
-	- collaborative painting page (very basic)
+	+ marketing home page
+	* single-user painting on home page
+	- collaborative painting
 	- wiki-fy the pages
 	- more complex painting?
 	- more collaborative features?
 
 User Stories:
-	- Marketing copy
-	- Publish to the Internet
+	* Create empty drawing area
+	- Draw one line
 
 Engineering Tasks:
-	* Fix DNS
+	? Fix DNS
+	* Set up client-testing
+	- Test drawing tool (Raphael)
+	- Integrate into the HTML page
 
 ToDo on current task:
+	- Get Karma running manually with one browser
+	- multiple browsers
+	- automate
+	- check that we're testing against all supported browsers
+	- Move karma conf file to another location
+	- Unify our test file location configuration (it's currently split between Jakefile & karma.conf.js)
 
 Future ideas:
 	- Create 'fail fast' assertion code
@@ -22,7 +32,7 @@ Future ideas:
 	- Static checking of function parameters (rather than writing tests)
 	- Handle errors properly in server.js
 	- server.stop() waits for open connections to close (e.g. Firefox keeps an open connection).
-	  make if forcibly close?
+	  Make if forcibly close?
 	- Remove Node version duplication between package.json and jakefile.js
 
 Notes:
