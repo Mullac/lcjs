@@ -19,3 +19,8 @@ Heroku commands
 	git push heroku master
 	heroku ps:scale web=0   // Stops the app
 	heroku ps:scale web=1   // Starts the app
+
+Karma client tests
+
+	karma start
+	karma run

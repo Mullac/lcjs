@@ -19,9 +19,9 @@ Engineering Tasks:
 	- Integrate into the HTML page
 
 ToDo on current task:
-	- Get Karma running manually with one browser
-	- multiple browsers
-	- automate
+	+ Get Karma running manually with one browser
+	+ multiple browsers
+	* automate
 	- check that we're testing against all supported browsers
 	- Move karma conf file to another location
 	- Unify our test file location configuration (it's currently split between Jakefile & karma.conf.js)
@@ -34,6 +34,7 @@ Future ideas:
 	- server.stop() waits for open connections to close (e.g. Firefox keeps an open connection).
 	  Make if forcibly close?
 	- Remove Node version duplication between package.json and jakefile.js
-
+	- Fix httpGet duplication
+	- Automate npm rebuild
 Notes:
 	- Nodeunit default reporter has minor display issues on Windows
